@@ -17,7 +17,7 @@ class Products{
   int id;
   List<Ingredients> ingredients;
   String name;
-fit 
+
   Products(this.ingredients, this.name);
 
   Products.fromMap(Map m,int id){

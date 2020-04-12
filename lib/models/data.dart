@@ -1,23 +1,22 @@
 
 class Ingredients{
-  double quantity;
   String name;
+  double quantity;
 
   Ingredients(this.quantity, this.name);
 
   Map<String, dynamic> toJson() => <String, dynamic>{'quantity': quantity, 'name': name};
+
   Ingredients.fromJson(Map m){
     this.quantity = m["quantity"];
     this.name = m["name"];
   }
-
 }
 
 class Products{
   int id;
   List<Ingredients> ingredients;
   String name;
-
   Products(this.ingredients, this.name);
 
   Products.fromMap(Map m,int id){
@@ -36,16 +35,16 @@ class Products{
 
 
 class Data{
+  Map<String,Products> nameProductList = new Map();
+  List<Products> productList;
 
   static final Data _data = Data._internal();
+
   Data._internal();
 
   factory Data() {
     return _data;
   }
-
-  Map<String,Products> nameProductList = new Map();
-  List<Products> productList;
 
   giveNameProductList() async{
       nameProductList.clear();
@@ -53,6 +52,4 @@ class Data{
         nameProductList[p.name]=p;
       }
   }
-
-
 }

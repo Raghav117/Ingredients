@@ -4,10 +4,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:sembast/sembast.dart';
 import 'package:sembast/sembast_io.dart';
 import 'dart:async';
-// import 'dart:io';
 import 'dart:typed_data';
-import 'package:flutter/services.dart' show rootBundle;
-// import 'package:path_provider/path_provider.dart';
 
 class ProductDb {
   static final ProductDb _product = ProductDb._internal();
